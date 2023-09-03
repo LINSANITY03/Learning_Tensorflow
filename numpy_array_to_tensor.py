@@ -32,11 +32,21 @@ tf.Tensor(
 [[9 9 9]
  [9 9 9]], shape=(2, 3), dtype=int32)'''
 
-ones_tensor = tf.ones([3, 4], tf.int32)
-print(ones_tensor)
+# ones_tensor = tf.ones([3, 4], tf.int32)
+# print(ones_tensor)
 # similar to tf.fill but with exact value of 1
 '''
 tf.Tensor(
+[[1 1 1 1]
+ [1 1 1 1]
+ [1 1 1 1]], shape=(3, 4), dtype=int32)'''
+
+# ones_like_tensor = tf.ones_like(
+#     ones_tensor, dtype=None, name=None
+# )
+# takes the input's dimension and creates a one's tf object
+# print(ones_like_tensor)
+'''tf.Tensor(
 [[1 1 1 1]
  [1 1 1 1]
  [1 1 1 1]], shape=(3, 4), dtype=int32)'''
