@@ -22,12 +22,21 @@ print(np_array)
  [0. 1. 0.]
  [0. 0. 1.]], shape=(3, 3), dtype=float32)'''
 
-fill_tensor = tf.fill(
-    [2, 3], 9, name=None
-)
-print(fill_tensor)
+# fill_tensor = tf.fill(
+#     [2, 3], 9, name=None
+# )
+# print(fill_tensor)
 # it automatically creates tensor object of required dimensional of a certain value
 '''
 tf.Tensor(
 [[9 9 9]
  [9 9 9]], shape=(2, 3), dtype=int32)'''
+
+ones_tensor = tf.ones([3, 4], tf.int32)
+print(ones_tensor)
+# similar to tf.fill but with exact value of 1
+'''
+tf.Tensor(
+[[1 1 1 1]
+ [1 1 1 1]
+ [1 1 1 1]], shape=(3, 4), dtype=int32)'''
