@@ -10,9 +10,10 @@ print(converted_tensor)
 
 eye_tensor = tf.eye(
     num_rows=3,
-    num_columns=None,
-    batch_shape=None,
-    dtype=tf.dtypes.float32,
+    num_columns=None,  # automatically equals to 3
+    batch_shape=None,  # specify how many iteration/subset you want
+    # batch leads the list if batch = (2, 4) then output dimension is (2, 4, 3, 3)
+    dtype=tf.dtypes.float32,  # data types
     name=None
 )
 print(eye_tensor)
