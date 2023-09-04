@@ -45,6 +45,12 @@ tf.Tensor(
 # print(result)
 # tf.Tensor([-5. -2.  0.  0.], shape=(4,), dtype=float32)
 
-A = tf.constant([2, 20, 30, 3, 6])
-print(tf.math.argmax(A))  # A[2] is maximum in tensor A
+# A = tf.constant([2, 20, 30, 3, 6])
+# print(tf.math.argmax(A))  # A[2] is maximum in tensor A
 # tf.Tensor(2, shape=(), dtype=int64) with 2 as indices
+
+# tensor_power = tf.math.pow(
+#     [2, 3], [6, 7], name=None
+# )
+# print(tensor_power)
+# tf.Tensor([  64 2187], shape=(2,), dtype=int32)
