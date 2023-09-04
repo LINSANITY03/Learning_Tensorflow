@@ -55,7 +55,23 @@ tf.Tensor(
 # print(tensor_power)
 # tf.Tensor([  64 2187], shape=(2,), dtype=int32)
 
-x = tf.constant([[1, 1, 1], [1, 1, 1]])
-reducing_sum = tf.reduce_sum(x)
-print(reducing_sum)  # tf.Tensor(6, shape=(), dtype=int32)
-print(reducing_sum.numpy())  # 6
+# x = tf.constant([[1, 1, 1], [1, 1, 1]])
+# reducing_sum = tf.reduce_sum(x)
+# print(reducing_sum)  # tf.Tensor(6, shape=(), dtype=int32)
+# print(reducing_sum.numpy())  # 6
+
+tensor_top_k = tf.math.top_k(
+    [[1, 4, 434], [90, 78, 23]],
+    k=1,
+    sorted=True,
+    index_type=tf.dtypes.int32,
+    name=None
+)
+print(tensor_top_k)
+# returns two output 1. output number 2. number's index
+'''
+TopKV2(values=<tf.Tensor: shape=(2, 1), dtype=int32, numpy=
+array([[434],
+       [ 90]])>, indices=<tf.Tensor: shape=(2, 1), dtype=int32, numpy=  
+array([[2],
+       [0]])>)'''
