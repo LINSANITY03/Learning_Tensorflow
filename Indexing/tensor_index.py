@@ -54,3 +54,8 @@ tf.Tensor(
 # )
 # print(tensor_power)
 # tf.Tensor([  64 2187], shape=(2,), dtype=int32)
+
+x = tf.constant([[1, 1, 1], [1, 1, 1]])
+reducing_sum = tf.reduce_sum(x)
+print(reducing_sum)  # tf.Tensor(6, shape=(), dtype=int32)
+print(reducing_sum.numpy())  # 6
