@@ -24,8 +24,17 @@ tf.Tensor(
 [[ 0 -1]
  [ 0  2]], shape=(2, 2), dtype=int32)'''
 
-x = tf.constant([-float("inf"), -9, -0.5, 1, 1.2, 45, 10000, float("inf")])
-print(tf.math.tan(x))
+# x = tf.constant([-float("inf"), -9, -0.5, 1, 1.2, 45, 10000, float("inf")])
+# print(tf.math.tan(x))
 '''tf.Tensor(
 [        nan  0.45231566 -0.5463025   1.5574077   2.572152    1.6197752 
   0.32097113         nan], shape=(8,), dtype=float32)'''
+
+x = tf.constant([1, 2, 3, 4])
+y = tf.constant([[7], [5], [4]])
+result = tf.math.multiply(x, y)
+print(result)
+'''tf.Tensor(
+[[ 7 14 21 28]
+ [ 5 10 15 20]
+ [ 4  8 12 16]], shape=(3, 4), dtype=int32)'''
