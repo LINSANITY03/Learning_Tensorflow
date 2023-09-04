@@ -56,4 +56,14 @@ tf.Tensor(
 rank_tensor = tf.constant([[[1, 2, 0], [3, 5, -1]],
                            [[10, 2, 0], [1, 0, 2]],
                            [[5, 8, 0], [2, 7, 0]]])
-print(tf.rank(rank_tensor))
+# print(tf.rank(rank_tensor))
+# tf.Tensor(3, shape=(), dtype=int32) rank is 3
+
+size_tensor = tf.size(
+    rank_tensor,
+    out_type=tf.dtypes.int32,
+    name=None
+)
+print(size_tensor)
+# tf.Tensor(18, shape=(), dtype=int32)
+# get the number of elements of out_type
