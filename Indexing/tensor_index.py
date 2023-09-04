@@ -39,8 +39,12 @@ tf.Tensor(
  [ 5 10 15 20]
  [ 4  8 12 16]], shape=(3, 4), dtype=int32)'''
 
-x = tf.constant([0., 0., 0., 0.])
-y = tf.constant([-5., -2., 0., 3.])
-result = tf.math.minimum(x, y)
-print(result)
+# x = tf.constant([0., 0., 0., 0.])
+# y = tf.constant([-5., -2., 0., 3.])
+# result = tf.math.minimum(x, y)
+# print(result)
 # tf.Tensor([-5. -2.  0.  0.], shape=(4,), dtype=float32)
+
+A = tf.constant([2, 20, 30, 3, 6])
+print(tf.math.argmax(A))  # A[2] is maximum in tensor A
+# tf.Tensor(2, shape=(), dtype=int64) with 2 as indices
