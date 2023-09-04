@@ -1,7 +1,8 @@
 import numpy as np
 import tensorflow as tf
-np_array = np.array([1, 2, 4])
-print(np_array)
+
+# np_array = np.array([1, 2, 4])
+# print(np_array)
 # [1 2 4]
 
 # converted_tensor = tf.convert_to_tensor(np_array)
@@ -50,3 +51,9 @@ tf.Tensor(
 [[1 1 1 1]
  [1 1 1 1]
  [1 1 1 1]], shape=(3, 4), dtype=int32)'''
+
+
+rank_tensor = tf.constant([[[1, 2, 0], [3, 5, -1]],
+                           [[10, 2, 0], [1, 0, 2]],
+                           [[5, 8, 0], [2, 7, 0]]])
+print(tf.rank(rank_tensor))
