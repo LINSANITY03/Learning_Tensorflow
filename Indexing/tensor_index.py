@@ -6,10 +6,20 @@ import tensorflow as tf
 # print(tensor_indexed[:3])
 # tf.Tensor([ 2  6 12], shape=(3,), dtype=int32)
 
-tensor_two_d = tf.constant([[1, 2, 0], [4, 2, 9], [5, 79, 54], [5, 90, 43]])
-print(tensor_two_d[0:3, :])
+# tensor_two_d = tf.constant([[1, 2, 0], [4, 2, 9], [5, 79, 54], [5, 90, 43]])
+# print(tensor_two_d[0:3, :])
 '''
 tf.Tensor(
 [[ 1  2  0]
  [ 4  2  9]
  [ 5 79 54]], shape=(3, 3), dtype=int32)'''
+
+three_d_input = [[[1, 2, 0], [3, 5, -1]],
+                 [[10, 2, 0], [1, 0, 2]],
+                 [[5, 8, 0], [2, 7, 0]]]
+tensor_three_d = tf.constant(three_d_input)
+print(tensor_three_d[0:2, 0:2, 2])
+'''
+tf.Tensor(
+[[ 0 -1]
+ [ 0  2]], shape=(2, 2), dtype=int32)'''
