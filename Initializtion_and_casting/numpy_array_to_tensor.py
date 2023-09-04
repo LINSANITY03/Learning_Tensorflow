@@ -68,15 +68,15 @@ tf.Tensor(
 # tf.Tensor(18, shape=(), dtype=int32)
 # get the number of elements of out_type
 
-random_tensor = tf.random.normal(
-    [3, 2],
-    mean=10.0,
-    stddev=2.0,
-    dtype=tf.dtypes.float32,
-    seed=None,
-    name=None
-)
-print(random_tensor)
+# random_tensor = tf.random.normal(
+#     [3, 2],
+#     mean=10.0,
+#     stddev=2.0,
+#     dtype=tf.dtypes.float32,
+#     seed=None,
+#     name=None
+# )
+# print(random_tensor)
 # this function return a dimensional of given shape
 # which have random value having average of 10.0 and stddev of 2
 # meaning any value is between 8 and 12
@@ -86,3 +86,19 @@ tf.Tensor(
 [[ 8.114124 11.638804]
  [ 8.868149  8.113518]
  [ 8.33167  14.455563]], shape=(3, 2), dtype=float32)'''
+
+# uniform_tensor = tf.random.uniform(
+#     [3, 2],
+#     minval=2,
+#     maxval=5,
+#     dtype=tf.dtypes.float32,
+#     seed=None,
+#     name=None
+# )
+# print(uniform_tensor)
+
+# returns a shape with random value ranging from minval and maxval
+'''
+[0.5763211  0.55317414]
+ [0.94574106 0.38361692]
+ [0.4886359  0.18659806]], shape=(3, 2), dtype=float32)'''
