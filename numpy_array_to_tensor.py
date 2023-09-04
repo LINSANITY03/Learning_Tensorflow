@@ -53,17 +53,36 @@ tf.Tensor(
  [1 1 1 1]], shape=(3, 4), dtype=int32)'''
 
 
-rank_tensor = tf.constant([[[1, 2, 0], [3, 5, -1]],
-                           [[10, 2, 0], [1, 0, 2]],
-                           [[5, 8, 0], [2, 7, 0]]])
+# rank_tensor = tf.constant([[[1, 2, 0], [3, 5, -1]],
+#                            [[10, 2, 0], [1, 0, 2]],
+#                            [[5.11, 8.32, 1.2], [2, 7, 0]]])
 # print(tf.rank(rank_tensor))
 # tf.Tensor(3, shape=(), dtype=int32) rank is 3
 
-size_tensor = tf.size(
-    rank_tensor,
-    out_type=tf.dtypes.int32,
-    name=None
-)
-print(size_tensor)
+# size_tensor = tf.size(
+#     rank_tensor,
+#     out_type=tf.dtypes.float16,
+#     name=None
+# )
+# print(size_tensor)
 # tf.Tensor(18, shape=(), dtype=int32)
 # get the number of elements of out_type
+
+random_tensor = tf.random.normal(
+    [3, 2],
+    mean=10.0,
+    stddev=2.0,
+    dtype=tf.dtypes.float32,
+    seed=None,
+    name=None
+)
+print(random_tensor)
+# this function return a dimensional of given shape
+# which have random value having average of 10.0 and stddev of 2
+# meaning any value is between 8 and 12
+
+'''
+tf.Tensor(
+[[ 8.114124 11.638804]
+ [ 8.868149  8.113518]
+ [ 8.33167  14.455563]], shape=(3, 2), dtype=float32)'''
