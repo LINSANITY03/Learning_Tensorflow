@@ -1,4 +1,5 @@
 import tensorflow as tf
+import numpy as np
 
 # x_1 = tf.constant([[2, 4, 5], [56, 7, 24], [34, 76, 45]])
 # x_2 = tf.constant([[21, 64, 95], [52, 47, 64], [34, 76, 45]])
@@ -83,3 +84,12 @@ tf.Tensor(
 tf.Tensor(
 [[19 22]
  [43 50]], shape=(2, 2), dtype=int32)'''
+
+input_a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+print(input_a.T)
+# transpose the matrix using numpy not tf
+'''
+[[ 1  5  9]
+ [ 2  6 10]
+ [ 3  7 11]
+ [ 4  8 12]]'''
