@@ -68,3 +68,18 @@ tf.Tensor(
 [[ 0.45976427  0.65292865 -0.6019145 ]
  [ 0.6079746  -0.72547626 -0.32256952]
  [ 0.6472896   0.21764284  0.73051214]], shape=(3, 3), dtype=float32)'''
+
+# a = tf.constant([[1, 2], [3, 4]])
+# b = tf.constant([[5, 6], [7, 8]])
+# tensor_einsum = tf.einsum(
+#     "ij,jk -> ik", a, b
+# )
+# print(tensor_einsum)
+
+# kinda like lamda function for matrix
+# first param describe the equation following up with inputs
+
+'''
+tf.Tensor(
+[[19 22]
+ [43 50]], shape=(2, 2), dtype=int32)'''
