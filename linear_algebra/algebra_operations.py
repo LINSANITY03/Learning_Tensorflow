@@ -30,12 +30,15 @@ tf.Tensor(
 # 0 1 upper part
 # 1 0 lower part
 # print(tensor_band_part)
-det_input = tf.constant([[1.0, 5, 3], [4, 5, 6], [7, 8, 9]])
+
+
+# det_input = tf.constant([[1.0, 5, 3], [4, 5, 6], [7, 8, 9]])
 # DT_HALF, DT_FLOAT, DT_DOUBLE, DT_COMPLEX64, DT_COMPLEX128
 # tensor_det = tf.linalg.det(
 #     det_input, name=None
 # )
 # print(tensor_det)  # tf.Tensor(17.999992, shape=(), dtype=float32)
+
 
 # tensor_inverse = tf.linalg.inv(
 #     det_input, adjoint=False, name=None
@@ -47,3 +50,21 @@ tf.Tensor(
 [[-0.16666667 -1.1666673   0.83333373]
  [ 0.3333333  -0.66666687  0.33333346]
  [-0.16666666  1.5000006  -0.83333373]], shape=(3, 3), dtype=float32)'''
+
+# singular value
+# s, v, d = tf.linalg.svd(
+#     det_input, full_matrices=False, compute_uv=True, name=None
+# )
+# print(s, end='\n')  # represents singular values
+# print(v, end='\n')  # tensor of left singular vector
+# print(d, end='\n')  # tensor of right singular vector
+'''
+tf.Tensor([17.315311   2.4494896  0.424392 ], shape=(3,), dtype=float32)
+tf.Tensor(
+[[ 0.3142598  -0.94775826 -0.05472769]
+ [ 0.5060649   0.11846987  0.8543204 ]
+ [ 0.8032058   0.29617438 -0.5168575 ]], shape=(3, 3), dtype=float32)
+tf.Tensor(
+[[ 0.45976427  0.65292865 -0.6019145 ]
+ [ 0.6079746  -0.72547626 -0.32256952]
+ [ 0.6472896   0.21764284  0.73051214]], shape=(3, 3), dtype=float32)'''
